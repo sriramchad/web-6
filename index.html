@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V SOLUTIONS - Enhanced Computer Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        .p { width: 60px; background-color: #0085C4; height: 2px; }
+        .d { background-color: rgba(129, 138, 139, 0.503); text-align: center; }
+        .image-wrapper img { width: 100%; border-radius: 5px; cursor: pointer; }
+        .modal-close-btn { position: absolute; top: 10px; right: 10px; background: none; border: none; }
+        .modal-image { max-width: 100%; border-radius: 10px; }
+        .modal-header { background-color: greenyellow; }
+        .d-flex { width: 50%; height: 50%; }
+        footer { background-color: rgb(19, 36, 17); color: beige; }
+        section { display: none; } /* Initially hide all sections */
+        #welcome { display: block; } /* Show welcome section initially */
+        .navbar-brand { border-radius: 30%; background-color: beige; color: gold; text-shadow: 2px 2px 1px rgb(140, 208, 23); }
+        .section-header { font-size: 24px; color: #0085C4; margin-bottom: 10px; text-align: center; }
+        .section-container { padding: 30px; max-width: 600px; margin: auto; }
+        .p-10 { padding: 10px; }
+        textarea { resize: none; }
+        .b{color:rgb(107, 107, 12);background-color: pink;}
+        
+    </style>
+</head>
+<body bgcolor="black">
+    <div class="d py-3">
+        <h3>Enhanced-Computer-Services</h3>
+        <p>(Customers are very happy on Top-Notch performance by my Technicians)</p>
+    </div>
+    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><h2><b>ECS</b></h2></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active hover" href="javascript:void(0);" onclick="showSection('about')">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active hover" href="javascript:void(0);" onclick="showSection('payment')">Payment Info</a></li>
+                    <li class="nav-item"><a class="nav-link active hover" href="javascript:void(0);" onclick="showSection('gallery')">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link active hover" href="#" data-bs-toggle="modal" data-bs-target="#registerModal">Register</a></li>
+                    <li class="nav-item"><a class="nav-link active hover" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                    <li class="nav-item"><a class="nav-link active hover" href="javascript:void(0);" onclick="showSection('enquiry')">Enquiry</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Welcome Section -->
+    <section id="welcome" class="py-5 text-center">
+        <h1>Welcome to Ecs SOLUTIONS</h1>
+        <p>(Your trusted partner for web applications and IT services.)</p>
+    </section>
+    
+    <!-- About Us Section -->
+    <section id="about" class="py-3">
+        <div class="container">
+            <h2 class="text-center">About Us</h2>
+            <p class="text-center">(Delivering exceptional web applications with customer satisfaction at the core.)</p>
+            <center><button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#aboutDetails">Show More</button></center>
+            <div class="collapse mt-3" id="aboutDetails">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4><strong>Our Specialties</strong></h4>
+                        <ul>
+                            <li>Ethical business policies</li>
+                            <li>Live in touch with our customers</li>
+                            <li>Transparent dealings</li>
+                            <li>Wide connectivity</li>
+                            <li>We listen, we understand, we provide solutions</li>
+                            <li>A great experience with happy clients</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4><strong>Experience</strong></h4>
+                        <ul>
+                            <li>18 years of experience in the field</li>
+                            <li>Team members with 15+ years of experience</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section id="payment" class="bg-light py-4">
+        <div class="container">
+            <h2 class="text-center">Payment Methods</h2>
+            <p align="center">(All payment types Available)</p>
+            
+            <h3 class="mb-3"><u>QR codes:</u></h3>
+
+<div class="row">
+    <div class="col-md-8 mb-4">
+        <h4 class="mb-2" style="color:rgba(104, 5, 203, 0.94);padding:20px;">PhonePe</h4>
+        <img src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720434474325.png" class="img-fluid qr-image" alt="PhonePe QR Code" width="200px"/>
+    </div>
+    <div class="col-md-2 mb-3">
+        <h4 class="mb-2" style="color:rgba(199, 17, 169, 0.878);padding:20px;background-color:rgb(248, 247, 247);background-size:50%">Google Pay</h4>
+        <img src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720434626742.png" class="img-fluid qr-image" alt="Google Pay QR Code"width="200px" border-radius="10px"/>
+    </div>
+</div>
+<center><button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#paymentDetails">Show More</button></center>
+            <div class="collapse mt-3" id="paymentDetails">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h4>Payment Options</h4>
+                        <p>Paytm: +91-9100371311</p>
+                        <p>PhonePe: +91-9100371311</p>
+                        <p>Google Pay: +91-9100371311</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h4>Bank Account Details</h4>
+                        <p><strong>Bank:</strong> UNION BANK</p>
+                        <p><strong>IFSC:</strong> UBIN0808806</p>
+                        <p><strong>Account Name:</strong> Kanugula Durga Vara Prasada Rao</p>
+                        <p><strong>Account Number:</strong> 088010100105302</p>
+                        <p><strong>Account Type:</strong> SB</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-3">
+        <div class="container">
+            <h2 class="text-center mb-4">Services Available</h2>
+            <p class="text-center">(All services available)</p>
+            
+                <div class="row g-3 justify-content-center">
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img class="img-fluid" onclick="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435195744.jpg')" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435195744.jpg" alt="Gallery Image 1">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img class="img-fluid" onclick="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435204947.jpg')" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435204947.jpg" alt="Gallery Image 2">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="image-wrapper">
+                            <img class="img-fluid" onclick="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435218739.png')" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435218739.png" alt="Gallery Image 3">
+                        </div>
+                    
+                </div>
+                <div class="text-center"><br>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#benu">
+                        Show More
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div class="collapse" id="benu">
+            <div class="row">
+            <div class="col-md-4">
+            <div class="image-wrapper">
+                <img onclick="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435293280.jpg')" alt="Image 5" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435293280.jpg" style="width:100%">
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="image-wrapper">
+                <img onclick="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435556985.jfif')" alt="Image 6" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435556985.jfif" style="width:100%">
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="image-wrapper">
+                <img onclick="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435560918.webp')" alt="Image 7" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435560918.webp" style="width:100%">
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="image-wrapper">
+                <img onclick="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435565592.jpg')" alt="Image 8" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435565592.jpg" style="width:100%">
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="image-wrapper">
+                <img onclick="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435570295.jpg')" alt="Image 9" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1720435570295.jpg" style="width:100%">
+            </div>
+            </div>
+            <div class="col-md-4">
+            <div class="image-wrapper">
+                <img onclick="openImageModal('https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1721213531250.jpg')" alt="Image 10" src="https://vcard-bucket.s3.us-east-2.amazonaws.com/A71/125/1721213531250.jpg" style="width:100%">
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- Modal for Full Image -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body text-center position-relative">
+                    <button type="button" class="btn-close modal-close-btn" data-bs-dismiss="modal"></button>
+                    <img id="modalImage" class="modal-image" src="" alt="Large Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm" novalidate>
+                        <div class="mb-3">
+                            <label for="regName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="regName" required>
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="regEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="regEmail" required>
+                            <div class="invalid-feedback">Please enter a valid email.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="regPhone" class="form-label">Phone Number</label>
+                            <input type="text" class="form-control" id="regPhone" required>
+                            <div class="invalid-feedback">Please enter your phone number.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm" novalidate>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                            <div class="invalid-feedback">Please enter your email.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                            <div class="invalid-feedback">Please enter your password.</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enquiry Section -->
+    <section id="enquiry" class="py-4">
+        <div class="container">
+          <h2 class="col-sm-12 text-center">Enquiry Now</h2>
+          <div class="col-12">
+            <form id="enquiryForm" novalidate>
+              <div class="mb-3">
+                <label for="enquiryName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="enquiryName" required>
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="mb-3">
+                <label for="enquiryEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="enquiryEmail" required>
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+              <div class="mb-3">
+                <label for="enquiryMessage" class="form-label">Message</label>
+                <textarea class="form-control" id="enquiryMessage" rows="4" required></textarea>
+                <div class="invalid-feedback">Please enter a message.</div>
+              </div>
+              <center>
+                <button type="submit" class="btn btn-primary">Send Enquiry</button>
+              </center>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    <footer class="text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 ECS SOLUTIONS. All Rights Reserved.</p>
+            <p style="color:rgb(210, 5, 39)"><strong>Contact:</strong> <a href="mailto:prasadkanugula@gmail.com">prasadkanugula@gmail.com</a></p>
+            <p style="color:rgb(218, 15, 49)"><strong>Location:</strong> Root Maps Gps <a href="https://www.google.com/maps/place/Vishnu+Agencies/@15.5113372,80.045301,50m/data=!3m1!1e3!4m6!3m5!1s0x3a4b01a9b5b79831:0xfaba4c7d12b00872!8m2!3d15.5112971!4d80.0453631!16s%2Fg%2F11gjj72866?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+              </svg></a></p>
+            <p><strong style="color:rgb(218, 15, 49)">Phone-1:</strong> +91 9100371311</p><p><strong style="color:rgb(218, 15, 49)">Phone-2:</strong> +91 9160600369</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to show specific section
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none'; // Hide all sections
+            });
+            document.getElementById(sectionId).style.display = 'block'; // Show the selected section
+        }
+
+        // Function to open the image modal
+        function openImageModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            var modal = new bootstrap.Modal(document.getElementById('imageModal'));
+            modal.show();
+        }
+
+        // Validation for forms
+        [registerForm, loginForm,enquiryForm].forEach(form => {
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            });
+        });
+    </script>
+</body>
+</html>
